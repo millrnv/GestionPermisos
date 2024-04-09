@@ -30,4 +30,5 @@ public class Municipalidad {
 	public void setCiudadanos(ArrayList<Ciudadano> ciudadanos) {
 		this.ciudadanos = ciudadanos;
 	}
+
 }

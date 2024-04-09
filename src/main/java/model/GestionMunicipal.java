@@ -76,31 +76,43 @@ public class GestionMunicipal {
 		}return false;
 	}
 
-	//Metodo para registrar ciudadanos
-	public void registrarCiudadano(Ciudadano ciudadano){
-		ciudadanos.add(ciudadano);
 
+
+	//Metodo para ver si ciudadano Existe
+	public boolean ciudadanoExiste(Ciudadano ciudadano){
+		for(Ciudadano vciudadano : ciudadanos){
+			if(vciudadano.getRut().equals(ciudadano.getRut())){
+				return true;
+			}
+		}
+		return false;
 	}
 
-
+	//Metodo para agregar ciudadanos
+	public boolean registrarCiudadano(Ciudadano ciudadano) {
+		if (!ciudadanoExiste(ciudadano)) {
+			ciudadanos.add(ciudadano);
+			return true;
+		}
+		return false;
+	}
 
 
 	//Metodo para buscar todos los permisos municipales de un ciudadano
-	public List<Permiso> buscarTodosLosPermisosMunicipales(Ciudadano ciudadano){
-		return null;
-
-
-	}
-
-
-
-
-	//Metodo para mostrar todos los permisos municipales de un ciudadano
-	public void mostrarTodosLosPermisosMunicipales(Ciudadano ciudadano){
-
-
+	public List<Permiso> buscarTodosLosPermisosMunicipalesPorCiudadano(Ciudadano ciudadano){
+		ArrayList<Permiso> permisosDelCiudadano = new ArrayList<Permiso>();
+		for (Permiso permiso : municipalidad.getPermisos()) {
+			if (permiso.getCiudadanos().equals(ciudadano)) {
+				permisosDelCiudadano.add(permiso);
+			}
+		}
+		if (permisosDelCiudadano.isEmpty()) {
+			System.out.println("No se encontraron los permisos para el ciudadano");
+		}
+		return permisosDelCiudadano;
 
 	}
+
 
 
 
@@ -111,14 +123,4 @@ public class GestionMunicipal {
 		return permiso.toString() + "\n" + "El coste del permiso es: " + permiso.costoPermiso();
 
 	}
-
-
-
-
-	public void solicitarNuevosPermisos() {
-		throw new UnsupportedOperationException();
-	}
-
-
-
 }

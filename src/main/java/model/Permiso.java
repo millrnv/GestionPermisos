@@ -7,6 +7,7 @@ public abstract class Permiso {
 	protected Date fechaVencimiento;
 	protected String id;
 	protected double costo;
+	private Ciudadano ciudadanos;
 	private Municipalidad municipalidad;
 
 
@@ -16,6 +17,14 @@ public abstract class Permiso {
 		this.fechaVencimiento = fechaVencimiento;
 		this.id = id;
 		this.costo = costo;
+	}
+
+	public Ciudadano getCiudadanos() {
+		return this.ciudadanos;
+	}
+
+	public void setCiudadanos(Ciudadano ciudadanos) {
+		this.ciudadanos = ciudadanos;
 	}
 
 
