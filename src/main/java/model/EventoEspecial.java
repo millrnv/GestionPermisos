@@ -1,12 +1,22 @@
 package model;
 
+import java.util.Date;
+
 public class EventoEspecial extends Permiso {
 	private String tipoEvento;
 	private int cantEsperada;
 	private String mSeguridad;
 
+	//Constructor
+	public EventoEspecial(Date fechaEmision, Date fechaVencimiento, String id, double costo, String tipoEvento, int cantEsperada, String mSeguridad) {
+		super(fechaEmision, fechaVencimiento, id, costo);
+		this.tipoEvento = tipoEvento;
+		this.cantEsperada = cantEsperada;
+		this.mSeguridad = mSeguridad;
+	}
+
 	public String getTipo() {
-		throw new UnsupportedOperationException();
+		return "Evento Especial";
 	}
 
 	public String getTipoEvento() {
@@ -34,6 +44,6 @@ public class EventoEspecial extends Permiso {
 	}
 
 	public double costoPermiso() {
-		throw new UnsupportedOperationException();
+		return costo+(cantEsperada/(100*100000));
 	}
 }

@@ -9,6 +9,16 @@ public abstract class Permiso {
 	protected double costo;
 	private Municipalidad municipalidad;
 
+
+	//Constructor
+	public Permiso(Date fechaEmision, Date fechaVencimiento, String id, double costo) {
+		this.fechaEmision = fechaEmision;
+		this.fechaVencimiento = fechaVencimiento;
+		this.id = id;
+		this.costo = costo;
+	}
+
+
 	public abstract String getTipo();
 
 	public Date getFechaEmision() {
