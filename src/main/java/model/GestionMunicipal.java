@@ -22,6 +22,15 @@ public class GestionMunicipal {
 
 	}
 
+	//Metodo para buscar permiso por fechaEmision
+
+
+
+	//Metodo para buscar permiso por fechaVencimiento
+
+
+
+
 	//Metodo para ver si permiso existe
 	public boolean permisoExiste(Permiso permiso) {
 		for(Permiso vpermiso : municipalidad.getPermisos()) {
@@ -46,6 +55,39 @@ public class GestionMunicipal {
 			return true;
 		}return false;
 	}
+
+	//Metodo para registrar ciudadanos
+
+
+
+	//Metodo para buscar todos los permisos municipales de un ciudadano
+	public List<Permiso> buscarTodosLosPermisosMunicipales(Ciudadano ciudadano){
+		return null;
+
+
+	}
+
+
+
+
+	//Metodo para mostrar todos los permisos municipales de un ciudadano
+	public void mostrarTodosLosPermisosMunicipales(Ciudadano ciudadano){
+
+
+
+	}
+
+
+
+
+
+	//Obtener informacion completa de un permiso municipal
+	public String informacionCompletaPermisoMunicipal(Permiso permiso){
+		return permiso.toString() + "\n" + "El coste del permiso es: " + permiso.costoPermiso();
+
+	}
+
+
 
 
 	public void solicitarNuevosPermisos() {

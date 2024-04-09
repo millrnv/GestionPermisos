@@ -48,4 +48,6 @@ public class Construccion extends Permiso {
 	public double costoPermiso() {
 		return costo+(m2AConstruir*150000);
 	}
+
+
 }

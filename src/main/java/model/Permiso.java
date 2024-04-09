@@ -54,4 +54,8 @@ public abstract class Permiso {
 	}
 
 	public abstract double costoPermiso();
+
+	public String toString() {
+		return "Permiso: " +fechaEmision+ " " + fechaVencimiento + " " + id + " " + costo;
+	}
 }
