@@ -7,7 +7,26 @@ public abstract class Permiso {
 	protected Date fechaVencimiento;
 	protected String id;
 	protected double costo;
+	private Ciudadano ciudadanos;
 	private Municipalidad municipalidad;
+
+
+	//Constructor
+	public Permiso(Date fechaEmision, Date fechaVencimiento, String id, double costo) {
+		this.fechaEmision = fechaEmision;
+		this.fechaVencimiento = fechaVencimiento;
+		this.id = id;
+		this.costo = costo;
+	}
+
+	public Ciudadano getCiudadanos() {
+		return this.ciudadanos;
+	}
+
+	public void setCiudadanos(Ciudadano ciudadanos) {
+		this.ciudadanos = ciudadanos;
+	}
+
 
 	public abstract String getTipo();
 
@@ -44,4 +63,8 @@ public abstract class Permiso {
 	}
 
 	public abstract double costoPermiso();
+
+	public String toString() {
+		return "Permiso: " +fechaEmision+ " " + fechaVencimiento + " " + id + " " + costo;
+	}
 }
