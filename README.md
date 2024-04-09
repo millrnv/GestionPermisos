@@ -20,3 +20,8 @@ Esto claro más los atributos de la clase padre.
 
 EventoEspecial: Es una clase hija de Permiso, es la encargada de los permisos de eventos especiales y entre sus atributos propios podemos nombrar: tipoEvento, cantEsperada, mSeguridad.
 Esto claro más los atributos de la clase padre.
+
+UML:
+
+![PERMISOSPNG](https://github.com/millrnv/GestionPermisos/assets/146766468/cca92afb-7e24-4182-a574-a5f51bc47e71)
+
