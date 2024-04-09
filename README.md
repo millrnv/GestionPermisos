@@ -23,5 +23,8 @@ Esto claro más los atributos de la clase padre.
 
 # UML:
 
-![PERMISOSPNG](https://github.com/millrnv/GestionPermisos/assets/146766468/cca92afb-7e24-4182-a574-a5f51bc47e71)
+![PERMISOSPNGG](https://github.com/millrnv/GestionPermisos/assets/146766468/533ee130-0a07-4490-bfe9-2f36d0882de1)
+
+
+
 
