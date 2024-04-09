@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class GestionMunicipal {
@@ -22,13 +23,32 @@ public class GestionMunicipal {
 
 	}
 
-	//Metodo para buscar permiso por fechaEmision
+	//Metodo para buscar permisos por fechaEmision
+	public List<Permiso> buscarPermisosFechaEmision(Date fechaEmision){
+		List<Permiso> permisosPorFechaEmision = new ArrayList<>();
 
+		for(Permiso permiso : municipalidad.getPermisos()){
+			if(permiso.getFechaEmision().equals(fechaEmision)){
+				permisosPorFechaEmision.add(permiso);
 
+			}
+
+		}
+		return permisosPorFechaEmision;
+	}
 
 	//Metodo para buscar permiso por fechaVencimiento
+	public List<Permiso> buscarPermisoFechaVencimiento(Date fechaVencimiento) {
+		List<Permiso> permisosPorFechaVencimiento = new ArrayList<>();
 
+		for(Permiso permiso : municipalidad.getPermisos()){
+			if(permiso.getFechaVencimiento().equals(fechaVencimiento)){
+				permisosPorFechaVencimiento.add(permiso);
+			}
+		}
+		return permisosPorFechaVencimiento;
 
+	}
 
 
 	//Metodo para ver si permiso existe
@@ -57,6 +77,11 @@ public class GestionMunicipal {
 	}
 
 	//Metodo para registrar ciudadanos
+	public void registrarCiudadano(Ciudadano ciudadano){
+		ciudadanos.add(ciudadano);
+
+	}
+
 
 
 
